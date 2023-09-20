@@ -40,5 +40,5 @@ const page = async ({ searchParams: { _search } }: { searchParams: { _search: st
     )
 }
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 export default page
