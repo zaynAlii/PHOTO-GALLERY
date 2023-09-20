@@ -1,11 +1,9 @@
 import React from 'react'
 import cloudinary from "cloudinary"
 import { Button } from '@/components/ui/button'
-import ShowImages from './ShowImages'
 import UploadButton from './UploadButton'
 import Grid from '@/app/Grid/grid'
 import SearchFrom from './SearchFrom'
-// import dynamic from 'next/dynamic'
 export interface singleimg {
     public_id: string,
     tags: string[]
