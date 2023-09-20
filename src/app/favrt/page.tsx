@@ -4,7 +4,7 @@ import { singleimg } from '../gallery/page'
 import Grid from "@/app/Grid/grid"
 import { ImgType } from '../gallery/page'
 import FavrtList from './FavrtList'
-const page = async () => {
+const Page = async () => {
     const result = await cloudinary.v2.search
         .expression('resource_type:image AND tags=favrt')
         // .sort_by('created_at', 'desc')
@@ -30,4 +30,4 @@ const page = async () => {
     )
 }
 
-export default page
+export default Page

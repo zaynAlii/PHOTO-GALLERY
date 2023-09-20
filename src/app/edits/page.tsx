@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-const page = ({ searchParams: { _id } }: { searchParams: { _id: string } }) => {
+const Page = ({ searchParams: { _id } }: { searchParams: { _id: string } }) => {
     const [filters, setfilters] = useState<"generative-fill" | "grayscale" | "removeBackground" | "blur" | "">("");
     const [prompt, setPropmt] = useState<string>("");
     const [pending, setpendingPropmt] = useState<string>("");
@@ -130,4 +130,4 @@ const page = ({ searchParams: { _id } }: { searchParams: { _id: string } }) => {
     )
 }
 
-export default page
+export default Page

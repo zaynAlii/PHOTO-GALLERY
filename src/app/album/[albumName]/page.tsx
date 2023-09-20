@@ -4,7 +4,7 @@ import Grid from '../AlbumGrid'
 import cloudinary from "cloudinary"
 import { ImgType } from '@/app/gallery/page'
 import PureRefresh from '@/app/PureRefrsh/refresh'
-const page = async ({ params: { albumName } }: { params: { albumName: string } }) => {
+const Page = async ({ params: { albumName } }: { params: { albumName: string } }) => {
     const result = await cloudinary.v2.search
         .expression(`resource_type:image AND folder=${albumName}`)
         .max_results(80)
@@ -37,4 +37,4 @@ const page = async ({ params: { albumName } }: { params: { albumName: string } }
     )
 }
 
-export default page
+export default Page

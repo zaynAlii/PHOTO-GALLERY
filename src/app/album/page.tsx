@@ -8,7 +8,7 @@ export interface folder {
 export interface folders {
     folders: folder[]
 }
-const page = async () => {
+const Page = async () => {
     const result = await cloudinary.v2.api.root_folders() as folders;
     // console.log(result)
 
@@ -35,4 +35,4 @@ const page = async () => {
     )
 }
 
-export default page
+export default Page
