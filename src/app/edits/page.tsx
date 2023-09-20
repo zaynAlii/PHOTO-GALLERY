@@ -30,25 +30,25 @@ const Page = ({ searchParams: { _id } }: { searchParams: { _id: string } }) => {
             </div>
 
             <div className='mt-5'>
-                <div className='flex space-x-6'>
-                    <Button className="py-2 px-4 bg-gray-700 hover:bg-gray/10 text-white " onClick={() => setfilters("")} >Clear ALL</Button>
-                    <div className='space-y-2'>
+                <div className='grid  md:grid-cols-3 lg:grid-cols-5  mx-8  space-x-6'>
+                    <Button className="py-2 px-4 mt-3 md:mt-0  bg-gray-700 hover:bg-gray/10 text-white " onClick={() => setfilters("")} >Clear ALL</Button>
+                    <div className='space-y-2 mb-3 mt-3 md:mt-0'>
                         <Button className=" " onClick={() => { setfilters("generative-fill"); setPropmt(pending) }} >Apply generative fill</Button>
-                        <Label htmlFor="name" className=" text-muted-foreground mt-3 block">
+                        <Label htmlFor="name" className="  text-muted-foreground mt-3 block">
                             Prompt
                         </Label>
                         <Input className='' value={pending} onChange={(e) => { setpendingPropmt(e.target.value) }} />
                     </div>
 
-                    <Button className=" " onClick={() => setfilters("grayscale")} >convert to grayscale</Button>
-                    <Button className=" " onClick={() => setfilters("removeBackground")} >Remove Background</Button>
-                    <Button className=" " onClick={() => setfilters("blur")} >blur</Button>
+                    <Button className=" mt-3 md:mt-0" onClick={() => setfilters("grayscale")} >convert to grayscale</Button>
+                    <Button className=" mt-3 md:mt-0" onClick={() => setfilters("removeBackground")} >Remove Background</Button>
+                    <Button className="mt-3 md:mt-0 mr-0  " onClick={() => setfilters("blur")} >blur</Button>
                 </div>
 
 
             </div>
 
-            <div className='mt-5  grid grid-cols-2 gap-x-10'>
+            <div className='mt-5  grid pl-8 md:pl-0 md:grid-cols-2 md:gap-x-10 gap-3'>
                 <div>
 
 
